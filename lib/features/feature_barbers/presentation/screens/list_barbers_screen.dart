@@ -38,11 +38,12 @@ class _ListBarbersScreenState extends State<ListBarbersScreen> {
                   final BarbersCompleted barbersCompleted=state.barbersStatus as BarbersCompleted;
                   final BarbersEntity barbersEntity=barbersCompleted.barbersEntity;
                   return Expanded(
-                      child: ListView(
-                        children: [
-                          BarbersItem(barbersEntity: barbersEntity),
-                        ],
+                      child: ListView.builder(
+                        itemCount: barbersEntity.results!.length,
+                        itemBuilder: (c,i){
+                          return BarbersItem(results: barbersEntity.results![i]);
 
+                        },
                       ),
                   );
 

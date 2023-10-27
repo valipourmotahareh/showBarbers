@@ -1,10 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:valipour_test/features/feature_barbers/data/models/barbers_list_model.dart';
 import 'package:valipour_test/features/feature_barbers/domain/entities/barbers_entity.dart';
 
 class BarbersItem extends StatelessWidget {
-  final BarbersEntity barbersEntity;
-  const BarbersItem({super.key,required this.barbersEntity});
+  final Results results;
+  const BarbersItem({super.key,required this.results});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class BarbersItem extends StatelessWidget {
         title: Row(
           children: [
             CachedNetworkImage(
-              imageUrl: barbersEntity.results!.first.avatar!,
+              imageUrl: results.avatar!,
               height: 100,
               width: 100,
               placeholder: (context, url) => const CircularProgressIndicator(),
@@ -28,14 +29,14 @@ class BarbersItem extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        barbersEntity.results!.first.fullname!,
+                        results.fullname!,
                         style: const TextStyle(fontSize: 14),
                       ),
                       Row(
                         children: [
                           const Icon(Icons.star_border_sharp),
                           Text(
-                              barbersEntity.results!.first.rate.toString()
+                              results.rate.toString()
                           )
                         ],
                       ),
@@ -43,12 +44,12 @@ class BarbersItem extends StatelessWidget {
                     ],
                   ),
                   Text(
-                    barbersEntity.results!.first.slug!,
+                    results.slug!,
                     style: const TextStyle(fontSize: 12),
                   ),
                   Text(
-                    barbersEntity.results!.first.address!,
-                    style: TextStyle(fontSize: 11),
+                    results.address!,
+                    style: const TextStyle(fontSize: 11),
                   )
                 ],
               ),
