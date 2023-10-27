@@ -14,7 +14,7 @@ class BarbersRepositoryImpl extends BarbersRepository{
     try {
       Response response = await apiProvider.getBarbers();
       if (response.statusCode == 200) {
-        BarbersEntity barbersEntity = BarbersListModel.fromJson(response);
+        BarbersEntity barbersEntity = BarbersListModel.fromJson(response.data);
         return DataSuccess(barbersEntity);
       } else {
         return const DataFailed("Something went Wrong, try again...");

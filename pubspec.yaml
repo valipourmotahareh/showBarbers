@@ -43,6 +43,7 @@ dependencies:
   intl: ^0.18.1
   lint: ^2.0.20
   loading_animation_widget: ^1.2.0+4
+  cached_network_image: ^3.2.3
 
 dev_dependencies:
   flutter_test:

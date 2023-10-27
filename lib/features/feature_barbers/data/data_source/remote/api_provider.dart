@@ -6,7 +6,7 @@ final Dio _dio=Dio();
 
 /// get barbers api call
 Future<dynamic> getBarbers() async{
-  var response=await _dio.get('${Constants.baseUrl}/aapi/services/');
+  var response=await _dio.get('${Constants.baseUrl}aapi/barbers/home/');
   return response;
 }
 }
