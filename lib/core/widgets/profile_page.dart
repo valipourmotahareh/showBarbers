@@ -6,7 +6,7 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Center(
-      child: Text("profile page"),
+      child: Text("profile page",style:TextStyle(color: Colors.white)),
     );
   }
 }

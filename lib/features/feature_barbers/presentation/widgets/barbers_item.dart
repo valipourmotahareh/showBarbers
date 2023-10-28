@@ -10,9 +10,7 @@ class BarbersItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: ExpansionTile(
-        key: PageStorageKey(key),
-        title: Row(
+      child: Row(
           children: [
             CachedNetworkImage(
               imageUrl: results.avatar!,
@@ -56,7 +54,6 @@ class BarbersItem extends StatelessWidget {
             ),
           ],
         ),
-      ),
     );
   }
 }

@@ -6,7 +6,7 @@ class BookMarkPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Center(
-      child: Text("bookMark Page"),
+      child: Text("bookMark Page",style: TextStyle(color: Colors.white),),
     );
   }
 }

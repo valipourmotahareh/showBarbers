@@ -64,6 +64,14 @@ flutter:
   uses-material-design: true
   assets:
      - assets/images/ellipse.png
+     - assets/images/cut.png
+     - assets/images/coloring.png
+     - assets/images/face_shave.png
+     - assets/images/hair_cut.png
+     - assets/images/skin_fades.png
+     - assets/images/slider.png
+     - assets/images/vector.png
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

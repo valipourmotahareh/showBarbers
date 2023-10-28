@@ -6,7 +6,7 @@ class MapPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Center(
-      child: Text("map page"),
+      child: Text("map page",style: TextStyle(color: Colors.white),),
     );
   }
 }

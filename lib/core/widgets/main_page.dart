@@ -15,26 +15,26 @@ class _MainPageState extends State<MainPage> {
   List<BottomNavigationBarItem> items=[
      BottomNavigationBarItem(label: "home",icon: const Icon(Icons.home),activeIcon: Column(
        children:  [
-         const Icon(Icons.home),
+         const Icon(Icons.home,color: Colors.black54,),
          Image.asset('assets/images/ellipse.png'),
        ],
     )),
     BottomNavigationBarItem(label: "bookMark",icon: const Icon(Icons.bookmark),activeIcon: Column(
       children:  [
-        const Icon(Icons.bookmark),
+        const Icon(Icons.bookmark,color: Colors.black54,),
         Image.asset('assets/images/ellipse.png'),
       ],
     )),
     BottomNavigationBarItem(label: "map",icon: const Icon(Icons.map),activeIcon: Column(
       children:  [
-        const Icon(Icons.map),
+        const Icon(Icons.map,color: Colors.black54,),
         Image.asset('assets/images/ellipse.png'),
       ],
     )),
 
     BottomNavigationBarItem(label: "profile",icon: const Icon(Icons.person),activeIcon: Column(
       children:  [
-        const Icon(Icons.person),
+        const Icon(Icons.person,color: Colors.black54,),
         Image.asset('assets/images/ellipse.png'),
       ],
     )),
