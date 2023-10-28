@@ -6,37 +6,64 @@ class LineService extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-        child:Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: Padding(
+      padding: const EdgeInsets.only(top: 30, bottom: 30, left: 20, right: 20),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Column(
             children: [
-              Column(
-                children: [
-                  Image.asset('assets/images/hair_cut.png'),
-                  Text("HAIRCUT",style: TextStyle(color: Colors.white)),
-                ],
+              Image.asset(
+                'assets/images/hair_cut.png',
               ),
-              Column(
-                children: [
-                  Image.asset('assets/images/face_shave.png'),
-                  Text("FACES SHAVE",style: TextStyle(color: Colors.white),),
-                ],
-              ),
-              Column(
-                children: [
-                  Image.asset('assets/images/skin_fades.png'),
-                  Text("SKIN FADES",style: TextStyle(color: Colors.white)),
-                ],
-              ),
-              Column(
-                children: [
-                  Image.asset('assets/images/coloring.png'),
-                  Text("COLORING",style: TextStyle(color: Colors.white)),
-                ],
+              const Padding(
+                padding: EdgeInsets.only(top: 8),
+                child: Text("HAIRCUT",
+                    style: TextStyle(color: Colors.white, fontSize: 12)),
               ),
             ],
           ),
-        ));
+          Column(
+            children: [
+              Image.asset(
+                'assets/images/face_shave.png',
+              ),
+              const Padding(
+                padding: EdgeInsets.only(top: 8),
+                child: Text(
+                  "FACES SHAVE",
+                  style: TextStyle(color: Colors.white, fontSize: 12),
+                ),
+              ),
+            ],
+          ),
+          Column(
+            children: [
+              Image.asset(
+                'assets/images/skin_fades.png',
+                height: 40,
+              ),
+              const Padding(
+                padding: EdgeInsets.only(top: 8),
+                child: Text("SKIN FADES",
+                    style: TextStyle(color: Colors.white, fontSize: 12)),
+              ),
+            ],
+          ),
+          Column(
+            children: [
+              Image.asset(
+                'assets/images/coloring.png',
+              ),
+              const Padding(
+                padding: EdgeInsets.only(top: 8),
+                child: Text("COLORING",
+                    style: TextStyle(color: Colors.white, fontSize: 12)),
+              ),
+            ],
+          ),
+        ],
+      ),
+    ));
   }
 }

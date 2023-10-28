@@ -5,56 +5,79 @@ class TopHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Padding(
+      padding: const EdgeInsets.only(top: 20),
       child: Column(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
+          Stack(
+            alignment: AlignmentDirectional.topEnd,
             children: [
-              Image.asset('assets/images/cut.png'),
+              Center(child: Image.asset('assets/images/cut.png')),
               Container(
+                width: 110,
                 decoration: BoxDecoration(
-                  color: Color(0xFF868484),
-                  borderRadius: BorderRadius.circular(20.0),
+                  color: const Color(0x2DFFFFFF),
+                  borderRadius: BorderRadius.circular(15.0),
                 ),
-                child:Padding(
+                child: Padding(
                   padding: const EdgeInsets.all(5.0),
                   child: Row(
                     children: const [
-                      Icon(Icons.location_pin,color: Colors.white,),
-                      Text("Renchview")
+                      Icon(
+                        Icons.location_pin,
+                        color: Colors.white,
+                      ),
+                      Text("RanchView")
                     ],
                   ),
                 ),
               ),
             ],
           ),
-          Text("Looke",style: TextStyle(fontSize: 50,color: Colors.white),),
-          Text("Fasted way for find ",style: TextStyle(fontSize: 20,color: Colors.white),),
-          Container(
-            height: 50,
-            width:MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(20.0),
+          const Text(
+            "Looke",
+            style: TextStyle(
+                fontSize: 60, color: Colors.white, fontWeight: FontWeight.bold),
+          ),
+          const Text(
+            "Fastest Way to Find Barbers",
+            style: TextStyle(
+              fontSize: 14,
+              color: Color(0xFF8A95AB),
             ),
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Expanded(child: Center(child: Text("search in barbers,location, service,....."))),
-                  ElevatedButton(
-                    onPressed: () {},
-                    child: Icon(Icons.search_outlined),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xFF6440FE),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(100.0),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 20),
+            child: Container(
+              height: 50,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20.0),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Expanded(
+                        child: Center(
+                            child: Text(
+                      "Search in Barbers, Location and services ...",
+                      style: TextStyle(color: Color(0xFFC7CDD9)),
+                    ))),
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFF6440FE),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50),
+                        ),
                       ),
+                      child: Image.asset('assets/images/ic-search.png'),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),

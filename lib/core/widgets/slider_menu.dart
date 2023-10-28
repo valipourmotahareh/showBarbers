@@ -6,9 +6,9 @@ class SliderMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width:MediaQuery.of(context).size.width,
+      width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
-        image: DecorationImage(
+        image: const DecorationImage(
           image: AssetImage('assets/images/slider.png'),
           fit: BoxFit.cover,
         ),
@@ -21,33 +21,44 @@ class SliderMenu extends StatelessWidget {
             Container(
               decoration: BoxDecoration(
                 border: Border.all(
-                 width: 1,
-             color: Colors.white,
-             ),
+                  width: 1,
+                  color: const Color(0x61FFFFFF),
+                ),
                 borderRadius: BorderRadius.circular(20.0),
               ),
-              child:Padding(
-                padding: const EdgeInsets.all(5.0),
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
                       children: [
                         Image.asset('assets/images/vector.png'),
-                        Text("Near by you",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),)
+                        const Padding(
+                          padding: EdgeInsets.only(left: 10),
+                          child: Text(
+                            "Nearby You",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        )
                       ],
                     ),
-                    Text("Find the nearest Barber shop to you on the map",style: TextStyle(color: Colors.white),),
+                    const Text(
+                      "Find the nearest Barbar Shop to you on the map",
+                      style: TextStyle(color: Colors.white),
+                    ),
                     ElevatedButton(
                       onPressed: () {},
-                      child: Text("View the map"),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFF6440FE),
+                        backgroundColor: const Color(0xFF6440FE),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
                       ),
+                      child: const Text("View the map"),
                     ),
-
                   ],
                 ),
               ),

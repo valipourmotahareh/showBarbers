@@ -71,6 +71,12 @@ flutter:
      - assets/images/skin_fades.png
      - assets/images/slider.png
      - assets/images/vector.png
+     - assets/images/ic-search.png
+     - assets/images/filter.png
+     - assets/images/home.png
+     - assets/images/book_mark.png
+     - assets/images/location.png
+     - assets/images/profile.png
 
   #   - images/a_dot_ham.jpeg
 
