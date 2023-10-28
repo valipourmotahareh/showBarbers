@@ -5,10 +5,7 @@ class BarbersState {
 
   BarbersState({required this.barbersStatus});
 
-  BarbersState copyWith({
-    BarbersStatus? newBarbersStatus
-      }){
-       return BarbersState(barbersStatus: newBarbersStatus ?? barbersStatus);
-     }
+  BarbersState copyWith({BarbersStatus? newBarbersStatus}) {
+    return BarbersState(barbersStatus: newBarbersStatus ?? barbersStatus);
+  }
 }
-

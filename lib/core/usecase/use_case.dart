@@ -1,3 +1,3 @@
-abstract class UseCase<T>{
+abstract class UseCase<T> {
   Future<T> call();
 }

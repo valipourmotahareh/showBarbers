@@ -5,31 +5,31 @@ import 'package:valipour_test/features/feature_barbers/domain/entities/barbers_e
 /// previous : null
 /// results : [{"slug":"Lookee","fullname":"Lookee","is_shop":false,"avatar":"https://lookee.nwhco.ir/media/barber/avatar/15_5.png","address":"California, West","lat_lon":"33,34","rate":4.0}]
 
-class BarbersListModel extends BarbersEntity{
+class BarbersListModel extends BarbersEntity {
   const BarbersListModel({
     num? count,
     dynamic next,
     dynamic previous,
-    List<Results>? results,}):super(
-    count:count,
-    next:next,
-    previous:previous,
-    results: results,
-  );
+    List<Results>? results,
+  }) : super(
+          count: count,
+          next: next,
+          previous: previous,
+          results: results,
+        );
 
   factory BarbersListModel.fromJson(dynamic json) {
     List<Results> results = [];
-    if(json['results'] != null) {
+    if (json['results'] != null) {
       json['results'].forEach((v) {
         results.add(Results.fromJson(v));
       });
     }
     return BarbersListModel(
-      count: json['count'],
-      next: json['next'],
-      previous:json['previous'],
-      results:results
-    );
+        count: json['count'],
+        next: json['next'],
+        previous: json['previous'],
+        results: results);
   }
 
   Map<String, dynamic> toJson() {
@@ -42,7 +42,6 @@ class BarbersListModel extends BarbersEntity{
     }
     return map;
   }
-
 }
 
 /// slug : "Lookee"
@@ -55,13 +54,14 @@ class BarbersListModel extends BarbersEntity{
 
 class Results {
   Results({
-      this.slug, 
-      this.fullname, 
-      this.isShop, 
-      this.avatar, 
-      this.address, 
-      this.latLon, 
-      this.rate,});
+    this.slug,
+    this.fullname,
+    this.isShop,
+    this.avatar,
+    this.address,
+    this.latLon,
+    this.rate,
+  });
 
   Results.fromJson(dynamic json) {
     slug = json['slug'];
@@ -72,6 +72,7 @@ class Results {
     latLon = json['lat_lon'];
     rate = json['rate'];
   }
+
   String? slug;
   String? fullname;
   bool? isShop;
@@ -91,5 +92,4 @@ class Results {
     map['rate'] = rate;
     return map;
   }
-
 }

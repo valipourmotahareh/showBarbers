@@ -5,8 +5,9 @@ import 'package:valipour_test/features/feature_barbers/data/models/barbers_list_
 import 'package:valipour_test/features/feature_barbers/domain/entities/barbers_entity.dart';
 import 'package:valipour_test/features/feature_barbers/domain/repository/barbers_repository.dart';
 
-class BarbersRepositoryImpl extends BarbersRepository{
+class BarbersRepositoryImpl extends BarbersRepository {
   ApiProvider apiProvider;
+
   BarbersRepositoryImpl(this.apiProvider);
 
   @override
